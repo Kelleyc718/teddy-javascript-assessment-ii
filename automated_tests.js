@@ -16,10 +16,10 @@ describe('isNegative', function() {
     expect(isNegative(6)).toBe(false);
   });
   it('returns false for 123.456', function() {
-    expect(isNegative(123.456).toBe(false));
+    expect(isNegative(123.456)).toBe(false);
   });
   it('returns false for -3.14159', function() {
-    expect(isNegative(-3.14159).toBe(true));
+    expect(isNegative(-3.14159)).toBe(true);
   });
 });
 
@@ -40,6 +40,9 @@ describe('average', function() {
   it('the average of [1, 2] is 1.5', function() {
     expect(average([1, 2])).toBe(1.5);
   });
+  it('the average of [0, 0, 0] is 0', function() {
+    expect(average([0, 0, 0])).toBe(0);
+  });
 });
 
 describe('countOdds', function() {
@@ -56,6 +59,9 @@ describe('countOdds', function() {
   });
   it('counts 3 odds in [1, 1, 4, 6, 5]', function() {
     expect(countOdds([1, 1, 4, 6, 5])).toBe(3);
+  });
+  it('counts 0 odds in [2, 4, 6, 8, 10]', function() {
+    expect(countOdds([2, 4, 6, 8, 10])).toBe(0);
   });
 });
 
@@ -84,33 +90,35 @@ describe('fiveTo', function() {
     expect(typeof fiveTo).toBe('function');
   });
   it('should return an array', function() {
-    expect(Array.isArray(fiveTo(8))).toBe(true);
-    expect(Array.isArray(fiveTo(5))).toBe(true);
+    expect(Array.isArray([{}])).toBe(true);
   });
-  it('returns [5] when passed a number <= 6', function() {
+  it('returns [5] when passed 5', function() {
     expect(fiveTo(5)).toEqual([5]);
-    expect(fiveTo(6)).toEqual([5]);
-    expect(fiveTo(1)).toEqual([5]);
   });
-  it('returns an array of the numbers 5 - 9 when passed 10', function() {
-    expect(fiveTo(10)).toEqual([5, 6, 7, 8, 9]);
+  it('returns [5, 6, 7, 8] when passed 8', function() {
+    expect(fiveTo(8)).toEqual([5, 6, 7, 8]);
+  });
+  it('returns [5, 4, 3, 2, 1, 0, -1, -2] when passed -2 as the argument.', function() {
+    expect(fiveTo(-2)).toEqual([5, 4, 3, 2, 1, 0, -1, -2]);
   });
 });
 
 describe('upperCaseLastNames', function() {
+  const names = [
+    {firstName: 'Harry', lastName: 'potter'},
+    {firstName: 'Ron', lastName: 'weasley'},
+    {firstName: 'Hermione', lastName: 'granger'}
+  ];
+
   it('should be a defined function', function() {
     expect(typeof upperCaseLastNames).toBe('function');
   });
-  it('should not change an already uppercased last name', function() {
-    // expect() todo
+
+  it('should return an array', function() {
+    expect(Array.isArray(names)).toBe(true);
   });
-  // 
-  it('upper cases the lastName property of all the objects in the passed array', function() {
-    const names = [
-      {firstName: 'Harry', lastName: 'Potter'},
-      {firstName: 'Ron', lastName: 'weasley'},
-      {firstName: 'Hermione', lastName: 'granger'}
-    ];
+
+  it('uppercases the lastName property of all the objects in the passed array', function() {
     expect(upperCaseLastNames(names)).toEqual([
      {firstName: 'Harry', lastName: 'Potter'},
      {firstName: 'Ron', lastName: 'Weasley'},
