@@ -1,3 +1,5 @@
+"use strict";
+
 describe('isNegative', function() {
   it('should be a defined function', function() {
     expect(typeof isNegative).toBe('function');
@@ -90,7 +92,7 @@ describe('fiveTo', function() {
     expect(typeof fiveTo).toBe('function');
   });
   it('should return an array', function() {
-    expect(Array.isArray([{}])).toBe(true);
+    expect(Array.isArray(fiveTo(5))).toBe(true);
   });
   it('returns [5] when passed 5', function() {
     expect(fiveTo(5)).toEqual([5]);
@@ -115,7 +117,7 @@ describe('upperCaseLastNames', function() {
   });
 
   it('should return an array', function() {
-    expect(Array.isArray(names)).toBe(true);
+    expect(Array.isArray(upperCaseLastNames(names))).toBe(true);
   });
 
   it('uppercases the lastName property of all the objects in the passed array', function() {

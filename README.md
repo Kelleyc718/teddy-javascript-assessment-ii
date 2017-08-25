@@ -13,12 +13,13 @@
     - Working with values, variables, and data types
     - Using assignment and comparisson operators
     - String and array manipulation
+    - Creating arrays and objects
     - Accessing and setting properties on objects
-    - Writing functions that accept inputs and return the correct answer
+    - Writing functions
 
 ## Instructions
 
-0. *Carefully* read all the instructions and problems.
+0. *Carefully* read all the instructions and problems before beginning your work.
 
 1. Clone this repository to your local projects directory
 
@@ -26,9 +27,7 @@
 
 1. Write your solutions to the problems presented below inside `solutions.js`.
 
-1. Manually test your functions by passing them the example inputs.
-
-1. Follow the "Testing" instructions provided below to run automated tests on your solution.
+1. The Testing instructions provided below to run automated tests on your solutions.
 
 1. Add, commit, and push to your branch
 
@@ -89,36 +88,53 @@
         ]
          */
 
+## Testing your work w/ automated tests
+
+Open `assessment.html` in your browser. Jasmine will run tests on the code inside `solutions.js`. The first time you load assessment.html, you will see every test failing because `solutions.js` is empty to start. 
+
+The automated tests provide immediate feedback as to whether or not your solutions solve the problems.
+
+- Click on "Spec List" inside of `assessment.html` to see green or red tests for each problem.
+
+- If all 7 of the specs for `isNegative` function are green, then the provided solution is correct.
+
+- Make sure that the functions inside `solutions.js` are 
+
 ## How solutions will be graded
 
 - Your grade is entirely dependent on the results of the automated tests. No credit will be given for partial or incorrect solutions. Accuracy and precision matter.
 
+- There are 6 points available on this assessment. Each solution will be awarded 1 point if the function accepts the correct inputs and produces the correct outputs. No points will be awarded if it does not. 
+
 - If you complete all 6 problems and the tests show 0 failures, you will earn a 100% grade.
 
-- If you complete 5 of the 6 problems and the only failing tests are for problems you did not attempt, you will earn an 83% grade.
+- If you write 6 solutions and the "Spec List" shows that one solution that has red assertions, you will receive 5 out of 6 points. 
 
-- If you complete 3 of the 6 problems and the only failing tests are for problems you did not attempt, you will earn a 50% grade.
+- If half of your functions have all green tests, and the only failing tests are for problems you did not attempt, you will earn a 50% grade.
 
 - If all the tests fail for all of your solutions, you will earn a 0% grade.
 
-## Testing your work
+## Hints
 
-Open `assessment.html` in your browser. It will run the automated tests on the code inside of `solutions.js`. The first time you load assessment.html, you will see every test failing because `solutions.js` is empty to start. 
+Consider this example problem. "Write a function called `isBoolean` that takes in a value and returns a boolean if the argument provided is a boolean value or not".
 
-The automated tests provide immediate feedback as to whether or not your solutions solve the problems.
+- When a problem says `return`, it means `return`, not `console.log`. 
 
-- Does the code solve the described problem?
+- When a problem says that a function will take in an input, then it means the function must be defined so that it takes in an argument as its input, rather than relying on variables defined outside the function.
 
-    The sample inputs shown will be used to determine this, as well as other
-    similiar inputs.
+Incorrect because the function does not take in an input.
+    var input = "Grace Hopper"
+    function isBoolean() {
+        return typeof input == "boolean";
+    }
 
-    Each problem will be awarded 2 points if the function accepts the correct
-    inputs and produces the correct outputs, no points will be awarded if it
-    does not.
+Incorrect because the function doesn't return the output.
+    function isBoolean(input) {
+        console.log(typeof input == 'boolean');
+    }
 
-- Did you follow the instructions *precisely*?
+Correct solution:
+    function isBoolean(input) {
+        return typeof input == "boolean";
+    }
 
-    - Did you create an appropriately named branch?
-    - Did you push your solutions to GitHub?
-    - Did you name your functions exactly as specified?
-    - Did you `return` the final output from each function?
