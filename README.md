@@ -98,7 +98,7 @@ The automated tests provide immediate feedback as to whether or not your solutio
 
 - If all the specs for `isNegative` function are green, then the provided solution is correct.
 
-- Make sure that the functions inside `solutions.js` are 
+- Make sure that the functions inside `solutions.js` are not wrapped in an IFFE.
 
 ## How solutions will be graded
 
