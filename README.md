@@ -123,17 +123,20 @@ Consider this example problem. "Write a function called `isBoolean` that takes i
 - When a problem says that a function will take in an input, then it means the function must be defined so that it takes in an argument as its input, rather than relying on variables defined outside the function.
 
 Incorrect because the function does not take in an input.
+    
     var input = "Grace Hopper"
     function isBoolean() {
         return typeof input == "boolean";
     }
 
 Incorrect because the function doesn't return the output.
+    
     function isBoolean(input) {
         console.log(typeof input == 'boolean');
     }
 
 Correct solution:
+    
     function isBoolean(input) {
         return typeof input == "boolean";
     }
