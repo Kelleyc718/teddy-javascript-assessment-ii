@@ -94,9 +94,9 @@ Open `assessment.html` in your browser. Jasmine will run tests on the code insid
 
 The automated tests provide immediate feedback as to whether or not your solutions solve the problems.
 
-- Click on "Spec List" inside of `assessment.html` to see green or red tests for each problem.
+- Click on Spec List inside of `assessment.html` to see test results.
 
-- If all 7 of the specs for `isNegative` function are green, then the provided solution is correct.
+- If all the specs for `isNegative` function are green, then the provided solution is correct.
 
 - Make sure that the functions inside `solutions.js` are 
 
@@ -104,11 +104,11 @@ The automated tests provide immediate feedback as to whether or not your solutio
 
 - Your grade is entirely dependent on the results of the automated tests. No credit will be given for partial or incorrect solutions. Accuracy and precision matter.
 
-- There are 6 points available on this assessment. Each solution will be awarded 1 point if the function accepts the correct inputs and produces the correct outputs. No points will be awarded if it does not. 
+- There are 6 points available on this assessment. Each solution will be awarded 1 point if all the specs for that solution are green. 
 
 - If you complete all 6 problems and the tests show 0 failures, you will earn a 100% grade.
 
-- If you write 6 solutions and the "Spec List" shows that one solution that has red assertions, you will receive 5 out of 6 points. 
+- If you write 6 solutions and the Spec List shows that one solution has failing tests, you will receive 5 out of 6 points.
 
 - If half of your functions have all green tests, and the only failing tests are for problems you did not attempt, you will earn a 50% grade.
 
@@ -122,7 +122,7 @@ Consider this example problem. "Write a function called `isBoolean` that takes i
 
 - When a problem says that a function will take in an input, then it means the function must be defined so that it takes in an argument as its input, rather than relying on variables defined outside the function.
 
-Incorrect because the function does not take in an input.
+Incorrect because the function does not take in an argument. It's modifying a global variable, and that is not the same as accepting an input as an argument.
     
     var input = "Grace Hopper"
     function isBoolean() {
