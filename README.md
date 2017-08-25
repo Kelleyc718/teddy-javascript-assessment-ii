@@ -27,7 +27,7 @@
 
 1. Write your solutions to the problems presented below inside `solutions.js`.
 
-1. The Testing instructions provided below to run automated tests on your solutions.
+1. Read the Testing instructions below.
 
 1. Add, commit, and push to your branch
 
@@ -104,11 +104,13 @@ The automated tests provide immediate feedback as to whether or not your solutio
 
 - Your grade is entirely dependent on the results of the automated tests. No credit will be given for partial or incorrect solutions. Accuracy and precision matter.
 
-- There are 6 points available on this assessment. Each solution will be awarded 1 point if all the specs for that solution are green. 
+- For a solution to be considered correct, all of the tests under that function's Spec List must be green.
+
+- There are 6 points available on this assessment. Each solution will be awarded 1 point if *all* the specs for that solution are green. 
 
 - If you complete all 6 problems and the tests show 0 failures, you will earn a 100% grade.
 
-- If you write 6 solutions and the Spec List shows that one solution has failing tests, you will receive 5 out of 6 points.
+- If you write 6 solutions and the Spec List shows that one function has failing tests, you will receive 5 out of 6 points.
 
 - If half of your functions have all green tests, and the only failing tests are for problems you did not attempt, you will earn a 50% grade.
 
