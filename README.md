@@ -118,28 +118,39 @@ The automated tests provide immediate feedback as to whether or not your solutio
 
 ## Hints
 
-Consider this example problem. "Write a function called `isBoolean` that takes in a value and returns a boolean if the argument provided is a boolean value or not". `isBoolean("Dog")` should return `false` because a string is not a boolean, `isBoolean(false)` should return `true` because only true and false are boolean values.
+Consider this example problem.
 
-- When a problem says `return`, it means `return`, not `console.log`. 
+> Write a function called `isBoolean` that takes in a value and returns a boolean if the argument provided is a boolean value or not.
+>
+> `isBoolean("Dog")` should return `false` because a string is not a boolean
+>
+> `isBoolean(false)` should return `true` because only true and false are boolean values.
+
+- When a problem says `return`, it means `return`, not `console.log`.
 
 - When a problem says that a function will take in an input, then it means the function must be defined so that it takes in an argument as its input, rather than relying on variables defined outside the function.
 
 The following example is incorrect because the function does not take in an argument. It's modifying a global variable, and that is not the same as accepting an input as an argument.
-    
-    var input = "Grace Hopper"
-    function isBoolean() {
-        return typeof input == "boolean";
-    }
+
+```js
+var input = "Grace Hopper"
+function isBoolean() {
+    return typeof input == "boolean";
+}
+```
 
 This is incorrect because the function doesn't return the output.
-    
-    function isBoolean(input) {
-        console.log(typeof input == 'boolean');
-    }
+
+```js
+function isBoolean(input) {
+    console.log(typeof input == 'boolean');
+}
+```
 
 Correct solution:
-    
-    function isBoolean(input) {
-        return typeof input == "boolean";
-    }
 
+```js
+function isBoolean(input) {
+    return typeof input == "boolean";
+}
+```
