@@ -20,7 +20,7 @@ describe('isNegative', function() {
   it('returns false for 123.456', function() {
     expect(isNegative(123.456)).toBe(false);
   });
-  it('returns false for -3.14159', function() {
+  it('returns true for -3.14159', function() {
     expect(isNegative(-3.14159)).toBe(true);
   });
 });
